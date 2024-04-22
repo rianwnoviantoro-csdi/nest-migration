@@ -36,7 +36,7 @@ export class AddRoleColumnIntoUserTable1713797609038
       (fk) => fk.columnNames.indexOf('role') !== -1,
     );
 
-    await queryRunner.dropForeignKey('answer', foreignKey);
+    await queryRunner.dropForeignKey('users', foreignKey);
 
     await queryRunner.dropColumn('users', 'role');
   }
